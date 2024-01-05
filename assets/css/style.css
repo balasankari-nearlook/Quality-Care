@@ -2320,7 +2320,14 @@ h3 a{
   margin-bottom: 61px;
 }
 
+
+#content_block_04 .form-inner .appointment-form .form-group input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 #content_block_04 .form-inner .appointment-form .form-group input[type='text'],
+#content_block_04 .form-inner .appointment-form .form-group input[type='date'],
 #content_block_04 .form-inner .appointment-form .form-group input[type='email'],
 #content_block_04 .form-inner .appointment-form .form-group textarea{
   position: relative;

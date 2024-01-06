@@ -540,3 +540,56 @@
         $preloader.find( '.boxes' ).fadeOut();
         $preloader.delay( 350 ).fadeOut( 'slow' );
     });
+
+	function submitForm(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Your additional form validation logic here
+
+        // Example: Basic validation for the name field
+        var nameInput = document.querySelector('input[name="name"]');
+        if (nameInput.value.trim() === "") {
+            alert("Please enter your name");
+            return;
+        }
+
+        // Example: Validation for the phone number field (numeric and exactly 10 characters)
+        var phoneInput = document.querySelector('input[name="phone"]');
+        if (phoneInput.value.trim().length !== 10) {
+            alert("Please enter a valid 10-digit phone number");
+            return;
+        }
+
+
+       
+        // Example: Basic validation for the email field
+        var emailInput = document.querySelector('input[name="email"]');
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+            alert("Please enter a valid email address");
+            return;
+        }
+
+        // Example: Basic validation for the subject field
+        var subjectInput = document.querySelector('input[name="subject"]');
+        if (subjectInput.value.trim() === "") {
+            alert("Please enter the subject");
+            return;
+        }
+
+        // Example: Basic validation for the date field
+        var dateInput = document.querySelector('input[name="date"]');
+        if (dateInput.value.trim() === "") {
+            alert("Please select a date");
+            return;
+        }
+
+        // If all validations pass, you can submit the form
+        document.getElementById("appointmentForm").submit();
+    }
+
+    function isValidPhoneNumber(phone)
+ {
+        return /^\d{10}$/.test(phone)
+;
+    }

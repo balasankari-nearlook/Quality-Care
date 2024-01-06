@@ -2328,6 +2328,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 #content_block_04 .form-inner .appointment-form .form-group input[type='text'],
 #content_block_04 .form-inner .appointment-form .form-group input[type='date'],
+#content_block_04 .form-inner .appointment-form .form-group input[type='tel'],
 #content_block_04 .form-inner .appointment-form .form-group input[type='email'],
 #content_block_04 .form-inner .appointment-form .form-group textarea{
   position: relative;

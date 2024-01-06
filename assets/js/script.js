@@ -538,7 +538,7 @@
     {
         var $preloader = $( '.preloader' );
         $preloader.find( '.boxes' ).fadeOut();
-        $preloader.delay( 350 ).fadeOut( 'slow' );
+        $preloader.delay( 0 ).fadeOut( 'slow' );
     });
 
 	function submitForm(event) {

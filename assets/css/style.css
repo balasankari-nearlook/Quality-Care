@@ -1607,6 +1607,7 @@ div#mCSB_1_container{
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
+  text-align: justify;
   color: #3d3c3c;
   margin-bottom: 8px;
   opacity: 0;
@@ -1842,6 +1843,7 @@ h3 a{
 
 #content_block_01 .content-box{
   position: relative;
+  text-align: justify;
 }
 
 .about-section #content_block_01 .content-box{

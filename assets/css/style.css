@@ -765,7 +765,6 @@ img {
   display: block;
   width: 100%;
   background: #2e3192;
-  padding: 17px 0px 16px 0px;
 }
 
 .main-header.style-one .header-top .info li{
@@ -909,7 +908,6 @@ img {
   -o-transition:all 500ms ease;
   transition:all 500ms ease;
 }
-
 .main-menu .navigation > li.dropdown > a:after{
   position: absolute;
   content: "\f0dd";
@@ -996,11 +994,6 @@ img {
   -ms-transition:all 500ms ease;
   -o-transition:all 500ms ease;
 }
-
-.main-menu .navigation > li > ul > li > a:hover{
-  
-}
-
 .main-menu .navigation > li > ul > li.dropdown > a:after{
   font-family: 'Font Awesome 5 Free';
   content: "\f105";
@@ -8168,3 +8161,41 @@ h4 a{
   width: 100%;
   height: 600px;
 }
+.terms h6{
+  margin-top: 10px;
+  color: #2e3192;
+  font-weight: bold;
+}
+.terms p{
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.menu-active{
+  color:#01aef0 !important;
+}
+.tab{
+  width: 370px;
+  height: 250px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) { 
+ .hide{
+      display: none;
+ }
+}
+@media screen and (device-width: 768px) { 
+  .hide1{
+       display: none;
+  }
+ }
+ @media screen and (min-device-width: 320px) and (max-device-width: 767px) { 
+  .hide2{
+       display: none;
+  }
+ }
+ @media screen and (min-device-width: 1024px) and (max-device-width: 2560px) { 
+  .hide2{
+       display: none;
+  }
+ }

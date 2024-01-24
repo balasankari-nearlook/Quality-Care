@@ -8179,6 +8179,7 @@ h4 a{
   height: 250px;
 }
 
+
 @media screen and (min-device-width: 320px) and (max-device-width: 768px) { 
  .hide{
       display: none;

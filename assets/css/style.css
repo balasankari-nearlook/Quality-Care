@@ -2318,7 +2318,7 @@ h3 a{
 
 #content_block_04 .form-inner .appointment-form .form-group input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
+     display: none;
     -webkit-appearance: none;
 }
 #content_block_04 .form-inner .appointment-form .form-group input[type='text'],
@@ -2354,7 +2354,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #content_block_04 .form-inner .appointment-form .form-group .custom-controls-stacked{
   position: relative;
   display: inline-block;
-  padding-left: 25px;
+  
 }
 
 #content_block_04 .form-inner .appointment-form .form-group .custom-controls-stacked .description{
@@ -2362,7 +2362,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: inline-block;
   font-weight: 500;
   padding: 0px;
-  margin-left: 25px;
   font-size: 14px;
   cursor: pointer;
   color: #777777;
@@ -8197,6 +8196,11 @@ h4 a{
  }
  @media screen and (min-device-width: 1024px) and (max-device-width: 2560px) { 
   .hide2{
+       display: none;
+  }
+ }
+ @media screen and (min-device-width: 320px) and (max-device-width: px) { 
+  .hide3{
        display: none;
   }
  }

@@ -8199,7 +8199,7 @@ h4 a{
        display: none;
   }
  }
- @media screen and (min-device-width: 320px) and (max-device-width: px) { 
+ @media screen and (min-device-width: 320px) and (max-device-width: 425px) { 
   .hide3{
        display: none;
   }

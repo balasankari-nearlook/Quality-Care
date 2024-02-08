@@ -10,7 +10,7 @@
 <title>Quality care</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/images/logo.png" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,400i,600,600i,700,700i,900&amp;display=swap" rel="stylesheet">
@@ -151,7 +151,7 @@
             <div class="auto-container">
                 <div class="outer-box clearfix">
                     <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="" width="80"></a></figure>
                     </div>
                     <div class="menu-area pull-right">
                         <!--Mobile Navigation Toggler-->
@@ -279,7 +279,7 @@
             <div class="auto-container">
                 <div class="outer-box clearfix">
                     <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="assets/images/small-logo.png" alt=""></a></figure>
+                        <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
                     </div>
                     <div class="menu-area pull-right">
                         <nav class="main-menu clearfix">
@@ -468,35 +468,35 @@
                                 <h2>Make An Appointment</h2>
                                 <span class="separator"></span>
                             </div>
-                            <form action="#" class="appointment-form">
+                            <form action="#" class="appointment-form" id="form">
                                 <div class="form-group">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" name="name" placeholder="Name" required="">
+                                    <input type="text" name="name" placeholder="Name" id="name">
                                 </div>
                                 <div class="form-group">
                                     <i class="fas fa-phone"></i>
-                                    <input type="tel" name="phone" placeholder="Phone number" pattern="[0-9]{10}" required="" id="phone">
+                                    <input type="tel" name="phone" placeholder="Phone number"   id="phoneno">
                                 </div>
                                 <div class="form-group">
                                     <i class="fas fa-envelope"></i>
-                                    <input type="email" name="email" placeholder="Email" required="">
+                                    <input type="email" name="email" placeholder="Email" id="email">
                                 </div>
                                 
                                 <div class="form-group">
                                     <i class="fas fa-file-alt"></i>
-                                    <input type="text" name="subject" placeholder="Subject" required="">
+                                    <input type="text" name="subject" placeholder="Subject" id="subject">
                                 </div>
-                                <div class="form-group">
+                                  <div class="form-group">
                                     <i class="fas fa-calendar-alt"></i>
-                                    <input type="date" name="date" placeholder="Date" required="">
-                                </div>
-                                <!--<div class="form-group">
-                                    <textarea name="message" placeholder="Tell us about Pasent"></textarea>
-                                </div>-->
-                                <div class="form-group message-btn">
-                                    <button type="submit" class="theme-btn style-one">Submit Query</button>
-                                </div>
+                                    <input type="date" name="date" placeholder="Date" id="date" >
+                                </div>  
+                                <!-- <div class="form-group">
+                                    <textarea name="message" placeholder="Tell us " id="message"></textarea>
+                                </div>   -->
                                 <div class="form-group">
+                                    <button type="submit" class="button" id="btn" disabled>Submit Query</button>
+                                </div>
+                                <!-- <div class="form-group">
                                     <div class="custom-controls-stacked">
                                         <label class="custom-control material-checkbox">
                                             <input type="checkbox" class="material-control-input">
@@ -504,7 +504,7 @@
                                             <span class="description">I agree that my submitted data is being collected and stored.</span>
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
@@ -559,35 +559,35 @@
                                     <h2>Make An Appointment</h2>
                                     <span class="separator"></span>
                                 </div>
-                                <form action="#" class="appointment-form">
+                                <form action="#" class="appointment-form" id="form">
                                     <div class="form-group">
                                         <i class="fas fa-user"></i>
-                                        <input type="text" name="name" placeholder="Name" required="">
+                                        <input type="text" name="name" placeholder="Name" id="name">
                                     </div>
                                     <div class="form-group">
                                         <i class="fas fa-phone"></i>
-                                        <input type="tel" name="phone" placeholder="Phone number" pattern="[0-9]{10}" required="" id="phone">
+                                        <input type="tel" name="phone" placeholder="Phone number"   id="phoneno">
                                     </div>
                                     <div class="form-group">
                                         <i class="fas fa-envelope"></i>
-                                        <input type="email" name="email" placeholder="Email" required="">
+                                        <input type="email" name="email" placeholder="Email" id="email">
                                     </div>
                                     
                                     <div class="form-group">
                                         <i class="fas fa-file-alt"></i>
-                                        <input type="text" name="subject" placeholder="Subject" required="">
+                                        <input type="text" name="subject" placeholder="Subject" id="subject">
                                     </div>
-                                    <div class="form-group">
+                                      <div class="form-group">
                                         <i class="fas fa-calendar-alt"></i>
-                                        <input type="date" name="date" placeholder="Date" required="">
-                                    </div>
-                                    <!--<div class="form-group">
-                                        <textarea name="message" placeholder="Tell us about Pasent"></textarea>
-                                    </div>-->
-                                    <div class="form-group message-btn">
-                                        <button type="submit" class="theme-btn style-one">Submit Query</button>
-                                    </div>
+                                        <input type="date" name="date" placeholder="Date" id="date" >
+                                    </div>  
+                                    <!-- <div class="form-group">
+                                        <textarea name="message" placeholder="Tell us " id="message"></textarea>
+                                    </div>   -->
                                     <div class="form-group">
+                                        <button type="submit" class="button" id="btn" >Submit Query</button>
+                                    </div>
+                                    <!-- <div class="form-group">
                                         <div class="custom-controls-stacked">
                                             <label class="custom-control material-checkbox">
                                                 <input type="checkbox" class="material-control-input">
@@ -595,7 +595,7 @@
                                                 <span class="description">I agree that my submitted data is being collected and stored.</span>
                                             </label>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </form>
                             </div>
                         </div>
@@ -619,7 +619,7 @@
                     <div class="row clearfix">
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/footer-logo.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo.png" alt="" width="80"></a></figure>
                                 <div class="text-justify">
                                     <p>At Quality Care Lab, we believe in the power of precision and compassion. Our journey in healthcare is not just about diagnostics; it's about fostering a community where quality meets care. Let's look closer at who we are and what drives us.</p>
                                 </div>
@@ -708,6 +708,41 @@
     <span class="fa fa-arrow-up"></span>
 </button>
 
+
+<script>
+    var cname = document.getElementById("name");
+	var cemail = document.getElementById("email");
+	var csubject = document.getElementById("subject");
+	var cdate = document.getElementById("date");
+	var cphone = document.getElementById("phoneno");
+	var btn = document.getElementById("btn");
+
+	cname.addEventListener("input", disablebtn);
+	cemail.addEventListener("input", disablebtn);
+	cphone.addEventListener("input", disablebtn);
+	csubject.addEventListener("input", disablebtn);
+	cdate.addEventListener("input", disablebtn);
+
+	function disablebtn() {
+    	var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    	var phonePattern = /^\d{10}$/;
+
+    if (
+        cname.value.trim() !== "" &&
+        cemail.value.trim() !== "" &&
+        emailPattern.test(cemail.value.trim()) &&
+        cphone.value.trim() !== "" &&
+        phonePattern.test(cphone.value.trim()) &&
+        csubject.value.trim() !== "" &&
+        cdate.value.trim() !== ""
+    ) {
+        btn.disabled = false;
+    } else {
+        btn.disabled = true;
+    }
+}
+
+</script>
 
 <!-- jequery plugins -->
 <script src="assets/js/jquery.js"></script>

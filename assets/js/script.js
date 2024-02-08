@@ -541,55 +541,88 @@
         $preloader.delay( 0 ).fadeOut( 'slow' );
     });
 
-	function submitForm(event) {
-        event.preventDefault(); // Prevent the form from submitting
+// 	function submitForm(event) {
+//         event.preventDefault(); // Prevent the form from submitting
 
-        // Your additional form validation logic here
+//         // Your additional form validation logic here
 
-        // Example: Basic validation for the name field
-        var nameInput = document.querySelector('input[name="name"]');
-        if (nameInput.value.trim() === "") {
-            alert("Please enter your name");
-            return;
-        }
+//         // Example: Basic validation for the name field
+//         var nameInput = document.querySelector('input[name="name"]');
+//         if (nameInput.value.trim() === "") {
+//             alert("Please enter your name");
+//             return;
+//         }
 
-        // Example: Validation for the phone number field (numeric and exactly 10 characters)
-        var phoneInput = document.querySelector('input[name="phone"]');
-        if (phoneInput.value.trim().length !== 10) {
-            alert("Please enter a valid 10-digit phone number");
-            return;
-        }
+//         // Example: Validation for the phone number field (numeric and exactly 10 characters)
+//         var phoneInput = document.querySelector('input[name="phone"]');
+//         if (phoneInput.value.trim().length !== 10) {
+//             alert("Please enter a valid 10-digit phone number");
+//             return;
+//         }
 
 
        
-        // Example: Basic validation for the email field
-        var emailInput = document.querySelector('input[name="email"]');
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-            alert("Please enter a valid email address");
-            return;
-        }
+//         // Example: Basic validation for the email field
+//         var emailInput = document.querySelector('input[name="email"]');
+//         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//         if (!emailRegex.test(emailInput.value.trim())) {
+//             alert("Please enter a valid email address");
+//             return;
+//         }
 
-        // Example: Basic validation for the subject field
-        var subjectInput = document.querySelector('input[name="subject"]');
-        if (subjectInput.value.trim() === "") {
-            alert("Please enter the subject");
-            return;
-        }
+//         // Example: Basic validation for the subject field
+//         var subjectInput = document.querySelector('input[name="subject"]');
+//         if (subjectInput.value.trim() === "") {
+//             alert("Please enter the subject");
+//             return;
+//         }
 
-        // Example: Basic validation for the date field
-        var dateInput = document.querySelector('input[name="date"]');
-        if (dateInput.value.trim() === "") {
-            alert("Please select a date");
-            return;
-        }
+//         // Example: Basic validation for the date field
+//         var dateInput = document.querySelector('input[name="date"]');
+//         if (dateInput.value.trim() === "") {
+//             alert("Please select a date");
+//             return;
+//         }
 
-        // If all validations pass, you can submit the form
-        document.getElementById("appointmentForm").submit();
+//         // If all validations pass, you can submit the form
+//         document.getElementById("appointmentForm").submit();
+//     }
+
+//     function isValidPhoneNumber(phone)
+//  {
+//         return /^\d{10}$/.test(phone);
+//     }
+
+
+	var cname = document.getElementById("name");
+	var cemail = document.getElementById("email");
+	var csubject = document.getElementById("subject");
+	var cdate = document.getElementById("date");
+	var cphone = document.getElementById("phoneno");
+	var btn = document.getElementById("btn");
+
+	cname.addEventListener("input", disablebtn);
+	cemail.addEventListener("input", disablebtn);
+	cphone.addEventListener("input", disablebtn);
+	csubject.addEventListener("input", disablebtn);
+	cdate.addEventListener("input", disablebtn);
+
+	function disablebtn() {
+    	var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    	var phonePattern = /^\d{10}$/;
+
+    if (
+        cname.value.trim() !== "" &&
+        cemail.value.trim() !== "" &&
+        emailPattern.test(cemail.value.trim()) &&
+        cphone.value.trim() !== "" &&
+        phonePattern.test(cphone.value.trim()) &&
+        csubject.value.trim() !== "" &&
+        cdate.value.trim() !== ""
+    ) {
+        btn.disabled = false;
+    } else {
+        btn.disabled = true;
     }
-
-    function isValidPhoneNumber(phone)
- {
-        return /^\d{10}$/.test(phone)
-;
-    }
+}
+	

@@ -593,7 +593,7 @@
 //         return /^\d{10}$/.test(phone);
 //     }
 
-
+// form
 	var cname = document.getElementById("name");
 	var cemail = document.getElementById("email");
 	var csubject = document.getElementById("subject");
@@ -625,4 +625,40 @@
         btn.disabled = true;
     }
 }
+
+    //modal popup form 
+	var mname = document.getElementById("mname");
+	var memail = document.getElementById("memail");
+	var msubject = document.getElementById("msubject");
+	var mdate = document.getElementById("mdate");
+	var mphone = document.getElementById("mphoneno");
+	var mbtn = document.getElementById("mbtn");
+
+	mname.addEventListener("input", disablebtn);
+	memail.addEventListener("input", disablebtn);
+	mphone.addEventListener("input", disablebtn);
+	msubject.addEventListener("input", disablebtn);
+	mdate.addEventListener("input", disablebtn);
+
+	function disablebtn() {
+    	var memailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    	var mphonePattern = /^\d{10}$/;
+
+    if (
+        mname.value.trim() !== "" &&
+        memail.value.trim() !== "" &&
+        memailPattern.test(memail.value.trim()) &&
+        mphone.value.trim() !== "" &&
+        mphonePattern.test(mphone.value.trim()) &&
+        msubject.value.trim() !== "" &&
+        mdate.value.trim() !== ""
+    ) {
+        mbtn.disabled = false;
+    } else {
+        mbtn.disabled = true;
+    }
+}
 	
+	
+	
+

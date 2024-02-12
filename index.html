@@ -240,7 +240,7 @@
                                 </ul>
                             </div>
                         </nav>
-                        <div class="btn-box"><a href="index.html" class="theme-btn style-one"data-toggle="modal" data-target="#exampleModal">Book An Appointment</a></div>
+                        <div class="btn-box"><a  class="theme-btn style-one"data-toggle="modal" data-target="#exampleModal">Book An Appointment</a></div>
                     </div>
                 </div>
             </div>
@@ -701,14 +701,15 @@
                                 <h2>Make An Appointment</h2>
                                 <span class="separator"></span>
                             </div>
-                            <form action="#" class="appointment-form" id="form">
+                            <form action="https://api.web3forms.com/submit" class="appointment-form" id="form" method="POST">
+                                <input type="hidden" name="access_key" value="7eccddef-6fc8-4e2a-8129-908f72ea9f30">
                                 <div class="form-group">
                                     <i class="fas fa-user"></i>
                                     <input type="text" name="name" placeholder="Name" id="name">
                                 </div>
                                 <div class="form-group">
                                     <i class="fas fa-phone"></i>
-                                    <input type="tel" name="phone" placeholder="Phone number"   id="phoneno">
+                                    <input type="tel" name="phone" placeholder="Phone number" id="phoneno">
                                 </div>
                                 <div class="form-group">
                                     <i class="fas fa-envelope"></i>
@@ -1001,33 +1002,34 @@
                                     <h2>Make An Appointment</h2>
                                     <span class="separator"></span>
                                 </div>
-                                <form action="#" class="appointment-form"  id="modal">
+                                <form action="https://api.web3forms.com/submit" class="appointment-form"  id="mform" method="POST">
+                                    <input type="hidden" name="access_key" value="7eccddef-6fc8-4e2a-8129-908f72ea9f30">
                                     <div class="form-group">
                                         <i class="fas fa-user"></i>
-                                        <input type="text" name="name" placeholder="Name" id="name">
+                                        <input type="text" name="name" placeholder="Name" id="mname">
                                     </div>
                                     <div class="form-group">
                                         <i class="fas fa-phone"></i>
-                                        <input type="tel" name="phone" placeholder="Phone number"   id="phoneno">
+                                        <input type="tel" name="phone" placeholder="Phone number"   id="mphoneno">
                                     </div>
                                     <div class="form-group">
                                         <i class="fas fa-envelope"></i>
-                                        <input type="email" name="email" placeholder="Email" id="email">
+                                        <input type="email" name="email" placeholder="Email" id="memail">
                                     </div>
                                     
                                     <div class="form-group">
                                         <i class="fas fa-file-alt"></i>
-                                        <input type="text" name="subject" placeholder="Subject" id="subject">
+                                        <input type="text" name="subject" placeholder="Subject" id="msubject">
                                     </div>
                                       <div class="form-group">
                                         <i class="fas fa-calendar-alt"></i>
-                                        <input type="date" name="date" placeholder="Date" id="date">
+                                        <input type="date" name="date" placeholder="Date" id="mdate">
                                     </div>  
                                     <!-- <div class="form-group">
                                         <textarea name="message" placeholder="Tell us " id="message"></textarea>
                                     </div>   -->
                                     <div class="form-group">
-                                        <button type="submit" class="button" id="btn" disabled>Submit Query</button>
+                                        <button type="submit" class="button" id="mbtn" disabled>Submit Query</button>
                                     </div>
                                     <!-- <div class="form-group">
                                         <div class="custom-controls-stacked">

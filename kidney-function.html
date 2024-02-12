@@ -269,7 +269,7 @@
                                 </ul>
                             </div>
                         </nav>
-                        <div class="btn-box"><a href="index.html" class="theme-btn style-one"data-toggle="modal" data-target="#exampleModal">Book An Appointment</a></div>
+                        <div class="btn-box"><a  class="theme-btn style-one"data-toggle="modal" data-target="#exampleModal">Book An Appointment</a></div>
                     </div>
                 </div>
             </div>
@@ -514,7 +514,8 @@
                                 <h2>Make An Appointment</h2>
                                 <span class="separator"></span>
                             </div>
-                            <form action="#" class="appointment-form" id="form">
+                            <form action="https://api.web3forms.com/submit" class="appointment-form" id="form" method="POST">
+                                <input type="hidden" name="access_key" value="7eccddef-6fc8-4e2a-8129-908f72ea9f30">
                                 <div class="form-group">
                                     <i class="fas fa-user"></i>
                                     <input type="text" name="name" placeholder="Name" id="name">
@@ -603,33 +604,34 @@
                                     <h2>Make An Appointment</h2>
                                     <span class="separator"></span>
                                 </div>
-                                <form action="#" class="appointment-form" id="form">
+                                <form action="https://api.web3forms.com/submit" class="appointment-form"  id="mform" method="POST">
+                                    <input type="hidden" name="access_key" value="7eccddef-6fc8-4e2a-8129-908f72ea9f30">
                                     <div class="form-group">
                                         <i class="fas fa-user"></i>
-                                        <input type="text" name="name" placeholder="Name" id="name">
+                                        <input type="text" name="name" placeholder="Name" id="mname">
                                     </div>
                                     <div class="form-group">
                                         <i class="fas fa-phone"></i>
-                                        <input type="tel" name="phone" placeholder="Phone number"   id="phoneno">
+                                        <input type="tel" name="phone" placeholder="Phone number"   id="mphoneno">
                                     </div>
                                     <div class="form-group">
                                         <i class="fas fa-envelope"></i>
-                                        <input type="email" name="email" placeholder="Email" id="email">
+                                        <input type="email" name="email" placeholder="Email" id="memail">
                                     </div>
                                     
                                     <div class="form-group">
                                         <i class="fas fa-file-alt"></i>
-                                        <input type="text" name="subject" placeholder="Subject" id="subject">
+                                        <input type="text" name="subject" placeholder="Subject" id="msubject">
                                     </div>
                                       <div class="form-group">
                                         <i class="fas fa-calendar-alt"></i>
-                                        <input type="date" name="date" placeholder="Date" id="date" >
+                                        <input type="date" name="date" placeholder="Date" id="mdate">
                                     </div>  
                                     <!-- <div class="form-group">
                                         <textarea name="message" placeholder="Tell us " id="message"></textarea>
                                     </div>   -->
                                     <div class="form-group">
-                                        <button type="submit" class="button" id="btn" >Submit Query</button>
+                                        <button type="submit" class="button" id="mbtn" disabled>Submit Query</button>
                                     </div>
                                     <!-- <div class="form-group">
                                         <div class="custom-controls-stacked">
@@ -754,6 +756,72 @@
 
 
 <!-- jequery plugins -->
+<script>
+    var cname = document.getElementById("name");
+var cemail = document.getElementById("email");
+var csubject = document.getElementById("subject");
+var cdate = document.getElementById("date");
+var cphone = document.getElementById("phoneno");
+var btn = document.getElementById("btn");
+
+cname.addEventListener("input", disablebtn);
+cemail.addEventListener("input", disablebtn);
+cphone.addEventListener("input", disablebtn);
+csubject.addEventListener("input", disablebtn);
+cdate.addEventListener("input", disablebtn);
+
+function disablebtn() {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var phonePattern = /^\d{10}$/;
+
+if (
+    cname.value.trim() !== "" &&
+    cemail.value.trim() !== "" &&
+    emailPattern.test(cemail.value.trim()) &&
+    cphone.value.trim() !== "" &&
+    phonePattern.test(cphone.value.trim()) &&
+    csubject.value.trim() !== "" &&
+    cdate.value.trim() !== ""
+) {
+    btn.disabled = false;
+} else {
+    btn.disabled = true;
+}
+}
+
+
+var mname = document.getElementById("mname");
+	var memail = document.getElementById("memail");
+	var msubject = document.getElementById("msubject");
+	var mdate = document.getElementById("mdate");
+	var mphone = document.getElementById("mphoneno");
+	var mbtn = document.getElementById("mbtn");
+
+	mname.addEventListener("input", disablebtn);
+	memail.addEventListener("input", disablebtn);
+	mphone.addEventListener("input", disablebtn);
+	msubject.addEventListener("input", disablebtn);
+	mdate.addEventListener("input", disablebtn);
+
+	function disablebtn() {
+    	var memailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    	var mphonePattern = /^\d{10}$/;
+
+    if (
+        mname.value.trim() !== "" &&
+        memail.value.trim() !== "" &&
+        memailPattern.test(memail.value.trim()) &&
+        mphone.value.trim() !== "" &&
+        mphonePattern.test(mphone.value.trim()) &&
+        msubject.value.trim() !== "" &&
+        mdate.value.trim() !== ""
+    ) {
+        mbtn.disabled = false;
+    } else {
+        mbtn.disabled = true;
+    }
+}
+</script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
